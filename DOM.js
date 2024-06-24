@@ -16,5 +16,5 @@ console.log(prevSection);
 const getDiv = document.querySelector('h2.highlight').closest('div');
 console.log(getDiv);
 
-const sectionsWithH2 = document.querySelectorAll('section:has(h2)');
+const sectionsWithH2 = Array.from(document.querySelectorAll('h2')).map(function(h2){return h2.parentElement}) 
 console.log(sectionsWithH2)
